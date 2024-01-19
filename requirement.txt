@@ -1,0 +1,5 @@
+moviepy==1.0.3
+pydub==0.25.1
+boto3==1.33.9
+langchain==0.1.0
+streamlit==1.30.0
