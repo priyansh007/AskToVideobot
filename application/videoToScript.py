@@ -11,12 +11,14 @@ class ScrumBot():
                  input_video_file_name,
                  text_file_name,
                  summary_file_name, 
-                 endpoint_name):
+                 endpoint_name,
+                 file_extension):
         self.s3bucket = s3bucket
         self.input_video_file_name = input_video_file_name
         self.endpoint_name = endpoint_name
         self.text_file_name = text_file_name
         self.summary_file_name = summary_file_name
+        self.file_extension = file_extension
 
 
     def uploadTextFile(self,
@@ -29,8 +31,11 @@ class ScrumBot():
 
     def videoToScript(self):
             sourcecode.upload_to_s3(self.input_video_file_name, self.input_video_file_name, self.s3bucket)
-            output_wav_file_name = self.input_video_file_name.replace(".mp4", ".wav")
-            sourcecode.convert_mp4_to_wav(self.input_video_file_name, output_wav_file_name)
+            output_wav_file_name = self.input_video_file_name.replace(self.file_extension, "wav")
+            if self.file_extension not in ["mp3"]:
+                 sourcecode.convert_mp4_to_wav(self.input_video_file_name, output_wav_file_name)
+            else:
+                 sourcecode.convert_audio_to_wav(self.input_video_file_name, output_wav_file_name)
             print(f"Conversion and upload successful. WAV file saved as {output_wav_file_name}")
             output_folder = "SpeechToText"
             ans = sourcecode.split_wav_file_and_convert_text(output_wav_file_name, output_folder, self.endpoint_name)

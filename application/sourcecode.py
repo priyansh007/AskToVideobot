@@ -25,6 +25,17 @@ def convert_mp4_to_wav(input_file, output_file):
     audio_clip = video_clip.audio
     audio_clip.write_audiofile(output_file)
     os.remove(input_file)
+
+def convert_audio_to_wav(input_file, output_file):
+    try:
+        audio = AudioSegment.from_file(input_file)
+        audio.export(output_file, format="wav")
+        os.remove(input_file)
+        print(f"Conversion successful. WAV file saved as {output_file}")
+        return True
+    except Exception as e:
+        print("Error occured at converting audio to wav")
+        return False
     
 def delete_folder(folder_path):
     try:

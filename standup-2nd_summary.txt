@@ -1,0 +1,19 @@
+ Here are the key takeaways from the meeting:
+
+To-Do Tasks:
+- Lavneet to send the scoped out rule to the team by end of today (Assigned to: Lavneet)
+- Nilo to follow up with Adrian on approval for publishing the Belfast blog early next week (Assigned to: Nilo)  
+- Nilo to remind Arun on Monday/Tuesday to check on approval status of Belfast blog (Assigned to: Nilo)
+- Ryan and Arun to connect with Colleen next week to discuss Scottsdale project list and get students assigned (Assigned to: Ryan, Arun)
+
+Roadblockers:
+- No major roadblockers discussed
+
+Action Items: 
+- Team to transition Alexa skills account from Billy to Justin next week (Assigned to: Team)
+- Arun to work internally to get the base environment set up for PCH in 1-2 weeks (Assigned to: Arun)
+
+Meeting Summary:
+- Lavneet provided update on completing scoped out rule for team
+- Arun provided update that work is being done internally to set up base environment for PCH 
+- Nilo discussed working on backlog tasks, maintaining website backend
